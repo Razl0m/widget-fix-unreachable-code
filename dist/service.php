@@ -269,7 +269,7 @@ class service
 
         $addedHeaders = $this->getHeaderValue($headers);
 
-        if ($result === false) {
+        if (!$result) {
             throw new RuntimeException(curl_error($ch), curl_errno($ch));
         }
 
